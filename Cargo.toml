@@ -1,0 +1,18 @@
+[package]
+name = "hello_cargo"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+libm = "0.2.2"
+itoa = "1.0.4"
+ukrust = { path = "../../unikraft/lib/ukrust/" }
+
+[lib]
+crate-type = ["staticlib"]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
